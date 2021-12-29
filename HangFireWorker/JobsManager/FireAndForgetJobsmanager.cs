@@ -1,6 +1,6 @@
 ﻿using Hangfire;
-using HangFireWorker.Jobs;
 using HangFireWorker.JobTypes;
+using HangFireWorker.Logs;
 using System;
 using System.Collections.Generic;
 using System.Linq;

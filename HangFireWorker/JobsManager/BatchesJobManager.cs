@@ -1,6 +1,6 @@
 ﻿using Hangfire;
-using HangFireWorker.Jobs;
 using HangFireWorker.JobTypes;
+using HangFireWorker.Logs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,10 @@ using System.Threading.Tasks;
 
 namespace HangFireWorker.JobsManager
 {
+
+    /// <summary>
+    /// toplu şekilde işlem yürütmek için , ücretli sürüm
+    /// </summary>
     public class BatchesJobManager :IbatchesJob
     {
         [Obsolete]

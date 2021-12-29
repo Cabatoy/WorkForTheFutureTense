@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -76,6 +77,7 @@ namespace WebUi
             });
 
             #region HangFire
+           
 
             SqlServerStorageOptions options = new SqlServerStorageOptions()
             {
@@ -131,6 +133,7 @@ namespace WebUi
             });
 
             #endregion
+
             GlobalJobFilters.Filters.Add(new AutomaticRetryAttribute() { Attempts = 1 });
             RecurringJobsManager recurringJobsManager = new RecurringJobsManager();
             recurringJobsManager.SetRecurringJobs();

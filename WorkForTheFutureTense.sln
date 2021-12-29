@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebUi", "WebUi\WebUi.csproj", "{EDF3B4A5-A8F9-48CC-B7CC-456EC7A5100E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HangFireWorker", "HangFireWorker\HangFireWorker.csproj", "{D995CBFD-B4E6-445A-AD3C-A84DD9E34DB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HangFireWorker", "HangFireWorker\HangFireWorker.csproj", "{D995CBFD-B4E6-445A-AD3C-A84DD9E34DB1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3B64E051-0732-4583-AC84-6C8405638628}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,10 +16,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EDF3B4A5-A8F9-48CC-B7CC-456EC7A5100E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EDF3B4A5-A8F9-48CC-B7CC-456EC7A5100E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EDF3B4A5-A8F9-48CC-B7CC-456EC7A5100E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EDF3B4A5-A8F9-48CC-B7CC-456EC7A5100E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D995CBFD-B4E6-445A-AD3C-A84DD9E34DB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D995CBFD-B4E6-445A-AD3C-A84DD9E34DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D995CBFD-B4E6-445A-AD3C-A84DD9E34DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU

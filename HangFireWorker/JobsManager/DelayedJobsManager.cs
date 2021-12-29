@@ -1,10 +1,7 @@
 ﻿using Hangfire;
-using HangFireWorker.Jobs;
 using HangFireWorker.JobTypes;
+using HangFireWorker.Logs;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace HangFireWorker.JobsManager
