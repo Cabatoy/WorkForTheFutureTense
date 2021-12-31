@@ -10,6 +10,6 @@ namespace HangFireWorker.JobTypes
     {
         Task SetRecurringJobsAsync();
 
-        void SetRecurringJobs();
+         void SetRecurringJobs();
     }
 }

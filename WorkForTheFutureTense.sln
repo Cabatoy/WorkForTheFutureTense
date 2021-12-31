@@ -5,10 +5,11 @@ VisualStudioVersion = 17.0.32002.185
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HangFireWorker", "HangFireWorker\HangFireWorker.csproj", "{D995CBFD-B4E6-445A-AD3C-A84DD9E34DB1}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{3B64E051-0732-4583-AC84-6C8405638628}"
-	ProjectSection(SolutionItems) = preProject
-		.editorconfig = .editorconfig
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotMvcButCoreWebUi", "NotMvcButCoreWebUi\NotMvcButCoreWebUi.csproj", "{408D4751-4E51-4A09-9AD2-7532E705AC47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleMethods", "SampleMethods\SampleMethods.csproj", "{34250279-A227-492E-9CE4-1704E8F83CF4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerilogSeqLogger", "SerilogSeqLogger\SerilogSeqLogger.csproj", "{E945DC5B-E655-4E6A-B10F-6998BE39DD42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +21,18 @@ Global
 		{D995CBFD-B4E6-445A-AD3C-A84DD9E34DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D995CBFD-B4E6-445A-AD3C-A84DD9E34DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D995CBFD-B4E6-445A-AD3C-A84DD9E34DB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{408D4751-4E51-4A09-9AD2-7532E705AC47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{408D4751-4E51-4A09-9AD2-7532E705AC47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{408D4751-4E51-4A09-9AD2-7532E705AC47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{408D4751-4E51-4A09-9AD2-7532E705AC47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{34250279-A227-492E-9CE4-1704E8F83CF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{34250279-A227-492E-9CE4-1704E8F83CF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{34250279-A227-492E-9CE4-1704E8F83CF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{34250279-A227-492E-9CE4-1704E8F83CF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E945DC5B-E655-4E6A-B10F-6998BE39DD42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E945DC5B-E655-4E6A-B10F-6998BE39DD42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E945DC5B-E655-4E6A-B10F-6998BE39DD42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E945DC5B-E655-4E6A-B10F-6998BE39DD42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

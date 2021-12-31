@@ -1,6 +1,5 @@
 ﻿using Hangfire;
 using HangFireWorker.JobTypes;
-using HangFireWorker.Logs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,15 +15,11 @@ namespace HangFireWorker.JobsManager
     public class BatchesJobManager :IbatchesJob
     {
         [Obsolete]
-        [AutomaticRetry(Attempts = 2,OnAttemptsExceeded = AttemptsExceededAction.Fail)]
-        [LogCompletion]
         public void SetBatcJobs()
         {
            
         }
         [Obsolete]
-        [AutomaticRetry(Attempts = 2,OnAttemptsExceeded = AttemptsExceededAction.Fail)]
-        [LogCompletion]
         public async Task SetBatcJobsAsync()
         {
             await Task.Run(() =>
@@ -32,5 +27,7 @@ namespace HangFireWorker.JobsManager
 
             });
         }
+        
     }
+
 }

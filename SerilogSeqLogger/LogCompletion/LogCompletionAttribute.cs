@@ -1,25 +1,23 @@
 ﻿using Hangfire.Client;
 using Hangfire.Common;
+using Hangfire.Logging;
 using Hangfire.Server;
 using Hangfire.States;
 using Hangfire.Storage;
-using log4net;
-using log4net.Config;
+using Serilog;
 using System;
-using System.IO;
-using System.Reflection;
 
-namespace HangFireWorker.Logs
+namespace SerilogSeqLogger.LogCompletion
 {
     public class LogCompletionAttribute :JobFilterAttribute, IClientFilter, IServerFilter, IElectStateFilter, IApplyStateFilter
     {
         //private static log4net.ILog Log { get; set; } = log4net.LogManager.GetLogger(typeof(LogCompletionAttribute));
-        private static readonly ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+        private static readonly ILogger log = new LoggerConfiguration().WriteTo.Seq("http://localhost:5341").CreateLogger();
+        //log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         public LogCompletionAttribute()
         {
-            var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-            XmlConfigurator.Configure(logRepository,new FileInfo("log4net.config"));
+
         }
 
         [Obsolete]
@@ -35,7 +33,9 @@ namespace HangFireWorker.Logs
         {
             if (!filterContext.Canceled && filterContext.Exception != null)
             {
-                string name = filterContext.Job.Method.Name;
+                string name = filterContext.Job.ToString() +"||"+ filterContext.Job.Method.Name;
+                
+
                 log.Error(name,filterContext.Exception);
                 //log.Error(filterContext,filterContext.Exception);
                 // Here you would write to your database.
@@ -62,9 +62,12 @@ namespace HangFireWorker.Logs
             var failedState = context.CandidateState as FailedState;
             if (failedState != null)
             {
-                log.WarnFormat(
-                    "Job `{0}` has been failed due to an exception `{1}`",
-                    context.BackgroundJob.Id,
+                //log.WarnFormat(
+                //    "Job `{0}` has been failed due to an exception `{1}`",
+                //    context.BackgroundJob.Id,
+                //    failedState.Exception);
+                log.Warning("`{0}` Hata Aldi. Hata===>`{1}` ",
+                    context.BackgroundJob.Job.Method.Name,
                     failedState.Exception);
             }
         }

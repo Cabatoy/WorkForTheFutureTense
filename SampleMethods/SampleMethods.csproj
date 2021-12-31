@@ -6,11 +6,9 @@
 
   <ItemGroup>
     <PackageReference Include="Hangfire.Core" Version="1.7.28" />
-    <PackageReference Include="Serilog.Sinks.Seq" Version="5.1.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SampleMethods\SampleMethods.csproj" />
     <ProjectReference Include="..\SerilogSeqLogger\SerilogSeqLogger.csproj" />
   </ItemGroup>
 
