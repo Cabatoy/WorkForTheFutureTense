@@ -1,3 +1,8 @@
 # WorkForTheFutureTense
-HangFire,Log4Net,Seq etc. WorkShop
+HangFire,Hanfire Aspects
+Log4Net,
+Seq
+Serilog.Sink
+etc.
+WorkShop
 Deneme Çalışmaları.
